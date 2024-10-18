@@ -20,7 +20,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
         // Lock out after 3 failed attempts
         if (loginAttempts >= 3) {
-            window.location.href = "index.html"; // Redirect to error page after 3 tries
+            window.location.href = "Home.html"; // Redirect to error page after 3 tries
         }
     }
 });
