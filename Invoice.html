@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <style>
+        body {
+            display: flex;                      
+            justify-content: center;            
+            align-items: flex-start;                
+            height: 100vh;                     
+            margin: 5;        
+            background-image: url(../Assets/BGP.jpg);
+        }
+
+        img { 
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 5px;
+            width: 100px; 
+            height: 100px;
+            animation: fadeIn 3s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        h3 {
+             position: absolute;              
+             top: 10px;           
+             right: 20px;         
+          }
+
+        h3 a {
+            text-decoration: none; 
+            font-family: Arial, sans-serif;
+            color: blue;         
+        }
+
+        h3 a:hover {
+            color: violet;    
+            text-decoration: underline; 
+        }
+
+        .invoice-container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .invoice-item {
+            margin-bottom: 10px;
+        }
+
+        .invoice-total {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        /* Button styles */
+        .buttons {
+            position: fixed;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<img src="../Assets/Logo.png" alt="Logo"> <br>
+    
+<h3>
+    <a href="Home.html">Home</a>&nbsp;&nbsp;
+    <a href="Product.html">Product</a>
+</h3>
+
+<div class="invoice-container">
+    <h2>Invoice</h2>
+    <div id="invoiceItems"></div>
+    <div id="subtotalAmount" class="invoice-total"></div>
+    <div id="taxAmount" class="invoice-total"></div>
+    <div id="discountAmount" class="invoice-total"></div>
+    <div id="totalAmount" class="invoice-total"></div>
+</div>
+
+<!-- Cancel and Exit buttons at the bottom center -->
+<div class="buttons">
+    <button class="button" id="cancelBtn" onclick="cancelOrder()">Cancel</button>
+    <button class="button" id="exitBtn" onclick="exitPage()">Exit</button>
+</div>
+
+<script>
+    // Global arrays for taxes and discounts
+    const taxRate = 0.07; // 7% tax
+    const discountRate = 0.1; // 10% discount for demonstration
+
+    // Get the cart from localStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Function to calculate and render the invoice
+    function renderInvoice() {
+        const invoiceItems = document.getElementById('invoiceItems');
+        const subtotalAmount = document.getElementById('subtotalAmount');
+        const taxAmount = document.getElementById('taxAmount');
+        const discountAmount = document.getElementById('discountAmount');
+        const totalAmount = document.getElementById('totalAmount');
+
+        let subtotal = 0;
+        let tax = 0;
+        let discount = 0;
+        let total = 0;
+
+        // Clear previous items
+        invoiceItems.innerHTML = '';
+
+        // Calculate subtotal
+        cart.forEach(item => {
+            const itemDiv = document.createElement('div');
+            itemDiv.classList.add('invoice-item');
+            itemDiv.innerText = `${item.name} - $${item.price.toFixed(2)}`;
+            invoiceItems.appendChild(itemDiv);
+            subtotal += item.price;
+        });
+
+        // Calculate tax, discount, and total
+        tax = subtotal * taxRate;
+        discount = subtotal * discountRate;
+        total = subtotal + tax - discount;
+
+        // Display amounts
+        subtotalAmount.innerText = `Subtotal: $${subtotal.toFixed(2)}`;
+        taxAmount.innerText = `Tax (7%): $${tax.toFixed(2)}`;
+        discountAmount.innerText = `Discount (10%): -$${discount.toFixed(2)}`;
+        totalAmount.innerText = `Total: $${total.toFixed(2)}`;
+    }
+
+    // Call the function to render the invoice
+    renderInvoice();
+
+    // Function to cancel the order
+    function cancelOrder() {
+        cart = []; // Empty the cart
+        localStorage.removeItem('cart'); // Clear from localStorage
+        alert("Your order has been cancelled.");
+window.location.href = "Product.html";
+            }
+
+    // Function to exit the page
+    function exitPage() {
+        if (confirm("Are you sure you want to exit? Please manually close the browser tab if it doesn't close automatically.")) {
+            window.close();         }
+    }
+</script>
+</body>
+</html>

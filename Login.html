@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Login</title>
+       <style>
+     
+         body {
+                 display: flex;                      
+                 justify-content: center;            
+                 align-items: flex-start;                
+                 height: 100vh;                     
+                 margin: 5;        
+                 background-image: url(../Assets/ET.png)                   
+              }
+          
+          img { 
+                position: absolute;
+                top:0;
+                left:0;
+                margin: 5px;
+                width:100px; 
+                height:100px;
+                animation: fadeIn 3s ease-in;
+              }
+               @keyframes fadeIn 
+               {
+                 from {
+                        opacity: 0;
+                      }
+                      to {
+                            opacity: 1;
+                         }
+               }
+
+           h3 {
+                margin-top: 20px;          
+              } 
+
+           div { 
+                 position:absolute;
+                 top: 200px;
+                 left:50%;
+                 transform: translateX(-50%);
+                 border:2px solid black; 
+                 padding: 20px;
+                 border-radius: 8px; 
+               }
+
+         input[type="email"], input[type="password"]{ 
+                 width: 100%;              
+                 max-width: 300px;          
+                 padding: 10px;             
+                 box-sizing: border-box;    
+               }
+
+        button {
+                 display: flex; 
+                 flex-direction: column; 
+                 align-items: center; 
+                 margin-top: 20px;       
+                 width: 100%;             
+                 max-width: 200px;            
+                 padding: 10px;
+                 background-color: #F7D9B0;
+
+               }
+
+
+      </style> 
+   
+</head>
+   <body>
+      <img src= "../Assets/Logo.png" alt="Logo"> <br>
+
+        
+
+      <br><div class="login-container">
+
+        <form id="loginForm">
+            <h2>Login</h2>
+            <input type="email" id="username" placeholder= "EMAIL ADDRESS" required><br><br>
+            <input type="password" id="password" placeholder= "PASSWORD" required minlength="8"><br><br>
+            <input type="checkbox" id="remember-me" name="remember-me">
+            <label for="remember-me">Remember Me</label>
+            <button type="submit">Login</button>
+        </form>
+
+        <p id="error-message"></p>
+     </div>
+
+
+    <script src="java.js" ></script>
+
+  
+     
+
+    
+    
+   </body>
+</html>

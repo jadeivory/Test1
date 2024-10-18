@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Products</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            margin: 5px;
+            background-image: url(../Assets/BGP.jpg);
+        }
+
+        img { 
+            margin: 5px;
+            width: 100px; 
+            height: 100px;
+            animation: fadeIn 3s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h3 {
+            position: absolute;              
+            top: 10px;           
+            right: 20px;         
+        }
+
+        h3 a {
+            text-decoration: none; 
+            font-family: Arial, sans-serif;
+            color: blue;         
+        }
+
+        h3 a:hover {
+            color: violet;    
+            text-decoration: underline; 
+        }
+
+        h2 {
+            margin: 20px 0 10px;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        .category {
+            width: 100%;
+            margin-bottom: 50px;
+        }
+
+        .product-card img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin: 10px;
+        }
+
+        h4, p, ul {
+            text-align: left;
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            justify-content: center;     
+            align-items: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: violet;
+        }
+
+        .buttons-container {
+            display: flex;               
+            justify-content: center;      
+            align-items: center;          
+            gap: 20px;                    
+            margin-top: 20px;             
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .product-card {
+            width: 250px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .product-card img {
+            margin: 10px 0;
+        }
+
+        .product-card button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<img src="../Assets/Logo.png" alt="Logo"> <br>
+
+<h3><a href="Aboutus.html">ABOUT US</a></h3>
+
+<div class="category">
+    <h2>La Liga Jerseys</h2><br>
+    <div class="product-container">
+        <div class="product-card">
+            <img src="../Assets/RMHK1.jpeg" alt="Real Madrid Jersey Front">
+            <img src="../Assets/RMHK2.jpeg" alt="Real Madrid Jersey Back">
+            <h4>Real Madrid 24/25 Home Jersey</h4>
+            <h5>Product Description</h5>
+            <p>Real Madrid's home kit is inspired by the traditional "chulapo" outfits worn during Madrid's San Isidro Fiesta. The jersey features a houndstooth pattern for added style and includes ventilating HEAT.RDY technology and a heat-applied club badge, designed for performance on the pitch. Made from 100% recycled materials.</p>
+            <h5>Product Details</h5>
+            <ul>
+                <li> Slim fit </li>
+                <li> V-neck </li>
+                <li> 100% polyester (recycled) </li>
+                <li> HEAT.RDY </li>
+                <li> Side mesh inserts </li>
+                <li> Real Madrid heat-applied crest </li>
+            </ul>
+            <h5>Price: $26,000.00</h5>
+            <button onclick="addToCart(0)">Add to Cart</button>
+        </div>
+
+
+        <div class="product-card">
+            <img src="../Assets/BH1.jpeg" alt="Barcelona Jersey Front">
+            <img src="../Assets/BH2.jpeg" alt="Barcelona Jersey Back">
+            <h4>Barcelona 24/25 Home Jersey</h4>
+          
+<h5>Product Description and Details </h5>
+<ul> 
+      <li> Nike Dri-FIT technology  </li>
+      <li> High-stretch, quick-drying fabric  </li>
+      <li> 100% recycled polyester </li>
+      <li> Colour: Blue and scarlet.</li>
+      
+</ul>
+<h5>Price: $20,000.00</h5>
+
+            <button onclick="addToCart(1)" >Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="../Assets/RMAWK1.jpeg" alt="Real Madrid Away Jersey Front">
+            <img src="../Assets/RMAWK2.jpeg" alt="Real Madrid Away Jersey Back"> 
+            <h4>Real Madrid 24/25 Away Jersey</h4>
+
+            <h5>Product Description</h5>
+            <p>The adidas Real Madrid away jersey celebrates a new football generation with a vibrant orange base and an abstract, star-inspired design. Metallic blue details, including a heat-applied club badge, add contrast. Performance-enhancing HEAT.RDY technology ensures optimal play. Made from 100% recycled materials, the jersey reduces waste and the use of finite resources, lowering its environmental impact.</p>
+  <h5>Product Details</h5>
+<ul> 
+      <li> The pattern of orange lines may not exactly match the image shown, as their position can vary slightly on each jersey </li>
+      <li> Slim fit </li>
+      <li> V-neck </li>
+      <li> 100% polyester (recycled) </li>
+      <li> HEAT.RDY </li>
+      <li> Side mesh inserts </li>
+      <li> Real Madrid heat-applied crest </li>
+</ul>
+<h5>Price: $26,000.00</h5>
+            <button onclick="addToCart(2)">Add to Cart</button>
+        </div> 
+
+<div class="product-card">
+            <img src="../Assets/BAW1.jpeg" alt="Barcelona Jersey Front">
+            <img src="../Assets/BAW2.jpeg" alt="Barcelona Jersey Back">
+            <h4>Barcelona 24/25 Home Jersey</h4>
+          
+<h5>Product Description and Details </h5>
+<ul> 
+     <lli> Ambilight patch on the left sleeve. </li>
+      <li> Nike Dri-FIT technology  </li>
+      <li> High-stretch, quick-drying fabric  </li>
+      <li> 100% recycled polyester </li>
+      <li> Colour: Lime </li>
+</ul>
+<h5>Price: $20,000.00</h5>
+            <button onclick="addToCart(3)" >Add to Cart</button>
+        </div>
+
+
+<div class="category" >
+<h2>EPL Jerseys</h2><br>
+ <div class="product-container">
+        <div class="product-card">
+            <img src="../Assets/MCH1.jpeg" alt="Manchester City Home Jersey Front">
+            <img src="../Assets/MCH2.jpeg" alt="Manchester City Home Jersey Back">
+            <h4>Manchester City 24/25 Home Jersey</h4>
+            <h5>Product Description</h5>
+
+            <p>The Manchester City 2024/25 Home jersey is inspired by the city's 0161 area code, symbolizing Mancunian pride. The code is featured inside the neckline and in a patterned knit on the neckline and cuffs. The jersey includes the OKX print on the left sleeve, the Manchester City crest, and the PUMA Cat logo embroidered on the chest. Designed for fans, it combines the match-day look with a comfortable, casual fit, ideal for everyday wear. "If it’s Sky Blue, it’s 0161" reflects the spirit of Manchester.</p>
+  <h5>Product Details</h5>
+<ul> 
+      <li> Regular Fit </li>
+      <li> Short Sleeves </li>
+      <li> Official Manchester City club crest badge on chest </li>
+      <li> 0161 Manchester telephone area code print inside the neckline </li>
+      <li> dryCELL  </li>
+      <li> Authentic Licensed Product label on hem  </li>
+      <li> Made from 100% Recycled Polyester </li>
+</ul>
+<h5>Price: $14,000.00</h5>
+            <button onclick="addToCart(4)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="../Assets/LHK1.jpeg" alt="Liverpool Home Jersey Front">
+            <img src="../Assets/LHK2.jpeg" alt=" Liverpool Home Jersey Back"> 
+            <h4>Liverpool 24/25 Home Jersey</h4>
+          
+<h5>Product Description</h5>
+<p>The Liverpool FC Men's 2024/25 Home Jersey features a Chrome Yellow pattern, offering a modern take on the iconic 1984 Home Shirt, a season when the club became European Champions for the fourth time and the first English team to win a Treble. Part of the Stadium collection, the jersey combines design details with sweat-wicking Nike Dri-FIT technology to keep fans dry and comfortable. Each jersey showcases a unique section of a YNWA-inspired abstract print, paying tribute to the legendary 1984 shirt.</p>
+
+<h5>Product Details </h5>
+<ul> 
+      <li> Red jersey with Chrome Yellow striped pattern and Liverpool FC details & sponsors. </li>
+      <li> 100% Polyester.</li>
+      <li> Machine wash. </li>
+
+      
+</ul>
+<h5>Price: $14,000.00</h5>
+            <button onclick="addToCart(5)" >Add to Cart</button>
+        </div>
+
+       <div class="product-card">
+            <img src="../Assets/MCAW1.jpeg" alt="Definitely City  Jersey Front">
+            <img src="../Assets/MCAW2.jpeg" alt="Definitely City Jersey Back">
+            <h4> Manchester City 24/25 Definitely City Jersey</h4>
+
+            <h5>Product Description</h5>
+            <p>Marking 30 years of <em>Definitely Maybe</em>, the Manchester City Fourth Kit is co-designed by Noel Gallagher, inspired by the iconic album cover. Featuring a retro collar, regular fit, and short sleeves, the kit has a vintage feel. It includes the PUMA Cat logo, Manchester City crest, and a unique "Definitely City" inscription in Gallagher's handwriting on the back of the neck. Engineered with dryCELL sweat-control technology, the jersey ensures comfort while celebrating both music and football.</p>
+
+  <h5>Product Details</h5>
+<ul> 
+      <li> "Definitely City" in Noel Gallagher's handwriting on the back of the neck </li>
+      <li> Regular Fit </li>
+      <li> Short Sleeves </li>
+      <li> Official Manchester City club crest badge on chest </li>
+      <li> Embroidered PUMA Cat logo on chest and both sleeves </li>
+      <li> Retro-inspired collar </li>
+      <li> dryCELL  </li>
+      <li> Authentic Licensed Product label on hem  </li>
+      <li> Made from 100% Recycled Polyester </li>
+</ul>
+<h5>Price: $14,000.00</h5> 
+            <button onclick="addToCart(6)">Add to Cart</button>
+        </div> 
+
+<div class="product-card">
+            <img src="../Assets/LAW1.jpeg" alt=" Liverpool Away Jersey Front"> 
+            <img src="../Assets/LAW2.jpeg" alt="Liverpool Away Jersey Back">
+            <h4>Liverpool 24/25 Away Jersey </h4>
+
+<h5>Product Description </h5>
+<p> The Liverpool FC Men's 2024/25 Away Jersey features an authentic design with lightweight, quick-drying fabric and advanced Dri-FIT ADV technology for moisture control. Tested by athletes, the jersey includes open-hole fabric in high-heat zones to keep players and fans cool during intense moments. Designed for optimal breathability, the jersey offers state-of-the-art performance for both on-pitch and casual wear.</p>
+          
+<h5>Product Details </h5>
+<ul> 
+<li> Green/Night Forest authentic jersey with design details in Teal and Liverpool FC details & sponsors in White.</li>
+      <li> 100% Polyester</li>
+      <li> Machine wash</li>
+</ul>
+<h5>Price: $14,000.00</h5>
+            <button onclick="addToCart(7)">Add to Cart</button>
+        </div>
+
+
+<div class="category" >
+<h2>NBA Jerseys</h2><br>
+<div class="product-container">
+        <div class="product-card">
+        <img src="../Assets/LL1.jpeg" alt="Los Angeles Lakers Jersey Front">   
+        <img src="../Assets/LL2.jpeg" alt="Los Angeles Lakers Jersey Back">    
+        <h4>Los Angeles Lakers Jersey</h4>
+
+            <h5>Product Description</h5>
+            <p>Match your favorite Los Angeles Lakers player this season with this LeBron James Fast Break Statement Edition Replica Player jersey from Fanatics. The detailed graphics give you a game-ready aesthetic while the lightweight feel and tailored fit ensure a comfortable game day experience. With multiple fabric technologies, this Statement jersey is a must-have for any dedicated Los Angeles Lakers supporter.</p>
+
+  <h5>Product Details</h5>
+<ul> 
+<li> Brand: Fanatics </li>
+      <li> Droptail hem</li>
+      <li> Heat-sealed jock tag with NBA logo</li>
+      <li> Screen print graphics </li>
+      <li> Sleeveless </li>
+      <li> FanFit: A more tailored fit providing improved comfort around the torso and arms </li>
+      <li> FanFlex: Revolutionary trims that are foldable, lightweight and machine washable </li>
+      <li> FanTex: Performance midweight fabric that has the optimal drape and range of motion </li>
+      <li> Material: 100% Recycled Polyester </li>
+      <li> Machine wash </li>
+      <li> Jersey Color Style: Statement </li>
+      <li> FanShield: Moisture management technology keeps you cool, dry and comfortable  </li>
+      <li> Officially licensed </li>
+
+      </ul>
+ <h5>Price: $13,000.00</h5>
+            <button onclick="addToCart(8)" >Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="../Assets/CB1.jpeg" alt="Chicago Bulls Jersey Front">  
+            <img src="../Assets/CB2.jpeg" alt="Chicago Bulls Jersey Back"> 
+            <h4> Chicago Bulls Jersey</h4>
+          
+<h5>Product Description</h5>
+<p>The Chicago Bulls Icon Swingman Custom Jersey is inspired by Nike's Authentic jersey, featuring classic trims, Chicago Bulls graphics, and Dri-FIT technology for comfort. Fans can personalize the jersey by adding their preferred name or text. However, not all customization requests will be accepted, as Fanatics reserves the right to reject orders with offensive or inappropriate messages. Ideal for showing fandom at Bulls games, this jersey combines style and personalization options.</p>
+
+<h5>Product Details </h5>
+<ul> 
+      <li> Brand: Nike </li>
+      <li> Crew Neck </li>
+      <li> Droptail hem with front splits</li>
+      <li> Heat-sealed graphics</li>
+      <li> Heat-sealed transfer applique </li>
+      <li> Lightweight design </li>
+      <li> Screen print graphics </li>
+      <li> Sleeveless </li>
+      <li> Woven jock tag at hem </li>
+      <li> Material: 100% Polyester </li>
+      <li> Machine wash,line dry </li>
+      <li> Jersey Color Style: Icon </li>
+      <li> Dri-FIT® technology wicks away moisture</li>
+      <li> Swingman</li>
+      <li> Officially licensed </li>      
+</ul>
+<h5>Price: $15,000.00</h5>
+            <button onclick="addToCart(9)" >Add to Cart</button>
+        </div>
+
+<div class="category" >
+<h2>NFL Jerseys</h2><br>
+<div class="product-container">
+       <div class="product-card">
+            <img src="../Assets/B1.jpeg" alt="Cincinatti Bengals Jersey Front">
+            <img src="../Assets/B2.jpeg" alt=" Cincinatti Bengals Jersey Back">
+            <h4> Cincinatti Bengals Jersey</h4>
+
+            <h5>Product Description</h5>
+            <p>Rep the on-field look of your favorite Cincinnati Bengals player with this Joe Burrow Game jersey from Nike. Its heat-sealed name, numbers and team details provide a kickoff-ready aesthetic while also offering a comfortable, lightweight feel. Designed for everyday movement, this jersey has a versatile tailored fit and features mesh side panels for added ventilation as you celebrate every big play by the Cincinnati Bengals this season.</p>
+
+  <h5>Product Details</h5>
+<ul> <li> Brand: Nike </li>
+      <li> Designed for movement</li>
+      <li> Heat-sealed graphics</li>
+      <li> Heat-sealed name, numbers and team details</li>
+      <li> Mesh side panels for extra breathability </li>
+      <li> Sewn-on NFL Shield at collar and satin twill woven jock tag at hem </li>
+      <li> Short sleeve</li>
+      <li> Side splits at hem</li>
+      <li> Material: 100% Polyester Tricot </li>
+      <li> Machine wash</li>
+      <li> Jersey Color Style: Team </li>
+      <li> Officially licensed </li>
+</ul>
+<h5>Price: $20,000.00</h5>
+            <button onclick="addToCart(10)" >Add to Cart</button>
+        </div> 
+
+<div class="product-card">
+             <img src="../Assets/C1.jpeg" alt="Kanas City Chiefs Jersey Front"> 
+             <img src="../Assets/C2.jpeg" alt="Kanas City Chiefs Jersey Back"> 
+            <h4>Kanas City Chiefs Jersey</h4>
+
+<h5>Product Description </h5>
+<p> Rep the on-field look of your favorite Kansas City Chiefs player with this Patrick Mahomes Game jersey from Nike. Its heat-sealed name, numbers and team details provide a kickoff-ready aesthetic while also offering a comfortable, lightweight feel. Designed for everyday movement, this jersey has a versatile tailored fit and features mesh side panels for added ventilation as you celebrate every big play by the Kansas City Chiefs this season.</p>
+          
+<h5>Product Details </h5>
+<ul> 
+<li> Brand: Nike </li>
+      <li> Designed for movement</li>
+      <li> Heat-sealed graphics</li>
+      <li> Heat-sealed name, numbers and team details</li>
+      <li> Mesh side panels for extra breathability </li>
+      <li> Sewn-on NFL Shield at collar and satin twill woven jock tag at hem </li>
+      <li> Short sleeve</li>
+      <li> Side splits at hem</li>
+      <li> Material: 100% Polyester Tricot </li>
+      <li> Machine wash</li>
+      <li> Jersey Color Style: Team </li>
+      <li> Officially licensed </li>
+
+</ul>
+<h5>Price: $20,000.00</h5>
+            <button onclick="addToCart(11)">Add to Cart</button>
+        </div>
+
+    </div>
+</div>
+
+<div class="buttons-container">
+    <button onclick="checkout()">CheckOut</button>
+    <button onclick="cancelOrder()">Cancel</button>
+    <button onclick="exitPage()">Exit</button>
+</div>
+
+<script>
+    // Global array for products
+    let products = [
+        { name: 'Real Madrid 24/25 Home Jersey', price: 26000, quantity: 15 },
+        { name: 'Barcelona 24/25 Home Jersey', price: 20000, quantity: 10 },
+        { name: 'Real Madrid 24/25 Away Jersey', price: 26000, quantity: 12},
+      { name: 'Barcelona 24/25 Away Jersey', price: 20000, quantity: 10},
+      { name: 'Manchester City 24/25 Home Jersey', price: 14000, quantity: 10},
+      { name: 'Liverpool 24/25 Home Jersey', price: 14000, quantity: 10},
+{ name: 'Manchester City 24/25 Definitely City Jersey', price: 14000, quantity: 10},
+      { name: 'Liverpool 24/25 Away Jersey', price: 14000, quantity: 10},
+
+      { name: 'Los Angeles Lakers Jersey', price: 13000, quantity: 15},
+      { name: 'Chicago Bulls Jersey', price: 15000, quantity: 10},
+      { name: 'Cincinatti Bengals Jersey', price: 20000, quantity: 12},
+      { name: 'Kanas City Chiefs Jersey', price: 20000, quantity: 10},
+
+    ];
+
+    // Array to store cart items
+    let cart = [];
+
+    // Add product to cart
+    function addToCart(index) {
+        let product = products[index];
+        cart.push(product);
+        alert(product.name + " added to cart.");
+    }
+
+    // Checkout function
+    function checkout() {
+        if (cart.length === 0) {
+            alert("Your cart is empty!");
+            return;
+        }
+        
+        let total = 0;
+        let invoice = "Invoice:\n\n";
+        
+        cart.forEach(item => {
+            invoice += item.name + " - $" + item.price + "\n";
+            total += item.price;
+        });
+        
+        invoice += "\nTotal: $" + total;
+        alert(invoice);
+// Save cart data in localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+    
+    // Navigate to the invoice page
+    window.location.href = "Invoice.html";
+    }
+
+    // Cancel order function
+    function cancelOrder() {
+        cart = [];
+        alert("Order has been canceled.");
+
+
+    }
+
+    // Exit page function
+    function exitPage() {
+        if (confirm("Are you sure you want to exit? Please manually close the browser tab if it doesn't close automatically.")) {
+   window.close();
+        }
+    }
+</script>
+
+</body>
+</html>
